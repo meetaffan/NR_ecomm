@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Anokha Karobaar – Handmade Wonders, Felt with Love. Beautiful handcrafted felt products, soy wax candles, and pipe cleaner flowers.">
+    <title>Anokha Karobaar – Handmade Wonders, Felt with Love</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&family=Dancing+Script:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Floating Particles Background -->
+    <div class="particles" id="particles"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <span class="logo-script">Anokha</span>
+                <span class="logo-script">Karobaar</span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-bg-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+        </div>
+        <div class="hero-content">
+            <p class="hero-tagline reveal-up">🌸 Handmade Wonders, Felt with Love</p>
+            <h1 class="hero-title">
+                <span class="reveal-up delay-1">Anokha</span>
+                <span class="hero-accent reveal-up delay-2">Karobaar</span>
+            </h1>
+            <p class="hero-description reveal-up delay-3">
+                Every piece tells a story — crafted with passion, wrapped in love.
+                Discover unique handmade felt creations, aromatic soy wax candles,
+                and stunning pipe cleaner flowers.
+            </p>
+            <div class="hero-cta reveal-up delay-4">
+                <a href="#products" class="btn btn-primary">Explore Collection</a>
+                <a href="#contact" class="btn btn-outline">Get in Touch</a>
+            </div>
+        </div>
+        <div class="hero-scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <p>Scroll Down</p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-header reveal-up">
+                <span class="section-tag">Our Story</span>
+                <h2 class="section-title">Crafted with <span class="highlight">Love</span> & Passion</h2>
+            </div>
+            <div class="about-grid">
+                <div class="about-card reveal-left">
+                    <div class="about-icon">🧵</div>
+                    <h3>Handmade Excellence</h3>
+                    <p>Every product at Anokha Karobaar is meticulously handcrafted, ensuring each piece carries a
+                        unique touch of artistry and warmth that machine-made products simply can't replicate.</p>
+                </div>
+                <div class="about-card reveal-up">
+                    <div class="about-icon">💝</div>
+                    <h3>Made with Heart</h3>
+                    <p>From selecting the finest materials to the last stitch, every step is driven by passion. We
+                        believe in creating products that spark joy and make perfect gifts for your loved ones.</p>
+                </div>
+                <div class="about-card reveal-right">
+                    <div class="about-icon">🎨</div>
+                    <h3>Custom Creations</h3>
+                    <p>Want something special? We offer custom creations tailored to your vision — personalized name
+                        hangings, themed candles, and bespoke flower bouquets designed just for you.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products" id="products">
+        <div class="container">
+            <div class="section-header reveal-up">
+                <span class="section-tag">Our Collections</span>
+                <h2 class="section-title">Handpicked <span class="highlight">Treasures</span></h2>
+                <p class="section-subtitle">Each collection is a labour of love, crafted to bring warmth and beauty into
+                    your life</p>
+            </div>
+
+            <!-- Filter Tabs -->
+            <div class="filter-tabs reveal-up">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="felt">🧵 Felt</button>
+                <button class="filter-btn" data-filter="candle">🕯️ Candles</button>
+                <button class="filter-btn" data-filter="flower">🌸 Flowers</button>
+            </div>
+
+            <!-- FELT COLLECTION -->
+            <div class="collection-banner reveal-up" data-category="felt">
+                <div class="banner-icon">🧵</div>
+                <h3>Felt Collection</h3>
+                <p>Soft, colorful, and utterly charming — our felt range transforms fabric into art</p>
+            </div>
+
+            <div class="products-grid">
+                <div class="product-card reveal-up" data-category="felt">
+                    <div class="product-image-wrapper">
+                        <img src="images/desk-buddy-duck.jpg" alt="Felt Stuffed Toy - Duck Desk Buddy" loading="lazy">
+                        <div class="product-overlay">
+                            <span class="product-badge">Bestseller</span>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h4>Felt Stuffed Toy – Duck Desk Buddy</h4>
+                        <p>Adorable handcrafted crochet duck sitting on a lily pad — perfect as a desk companion or a
+                            heartfelt gift</p>
+                        <span class="product-tag">🧵 Felt Collection</span>
+                    </div>
+                </div>
+
+                <div class="product-card reveal-up" data-category="felt">
+                    <div class="product-image-wrapper">
+                        <img src="images/desk-buddy-ducks.jpg" alt="Crochet Duck Set" loading="lazy">
+                        <div class="product-overlay">
+                            <span class="product-badge">Custom</span>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h4>Crochet Duck Collection</h4>
+                        <p>A charming family of handmade crochet ducks with leaf umbrellas — adorable desk buddies
+                            available in various colors</p>
+                        <span class="product-tag">🧵 Felt Collection</span>
+                    </div>
+                </div>
+
+                <div class="product-card reveal-up" data-category="felt">
+                    <div class="product-image-wrapper">
+                        <img src="images/octopus-keychains.jpg" alt="Octopus Keychains" loading="lazy">
+                        <div class="product-overlay">
+                            <span class="product-badge">Popular</span>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h4>Pipe Cleaner Octopus Keychains</h4>
+                        <p>Cute and cuddly octopus keychains in vibrant colors — blue, white, purple & more. The perfect
+                            bag accessory!</p>
+                        <span class="product-tag">🌸 Pipe Cleaner</span>
+                    </div>
+                </div>
+
+                <!-- CANDLE COLLECTION BANNER -->
+            </div>
+
+            <div class="collection-banner reveal-up" data-category="candle">
+                <div class="banner-icon">🕯️</div>
+                <h3>Soy Wax Candle Collection</h3>
+                <p>Hand-poured with premium soy wax and captivating fragrances for every mood</p>
+            </div>
+
+            <div class="products-grid">
+                <div class="product-card candle-card reveal-up" data-category="candle">
+                    <div class="product-image-wrapper candle-glow">
+                        <div class="candle-placeholder">
+                            <div class="candle-emoji">🕯️</div>
+                            <div class="candle-flame"></div>
+                        </div>
+                        <div class="product-overlay">
+                            <span class="product-badge festive">Festive</span>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h4>Laddoo-Shaped Candles</h4>
+                        <p>Realistic Motichoor Laddoo-shaped soy wax candles — perfect for Diwali décor and festive
+                            gifting. Burns beautifully for up to 5 hours!</p>
+                        <span class="product-tag">🕯️ Soy Wax Candles</span>
+                    </div>
+                </div>
+
+                <div class="product-card candle-card reveal-up" data-category="candle">
+                    <div class="product-image-wrapper candle-glow">
+                        <div class="candle-placeholder">
+                            <div class="candle-emoji">🫖</div>
+                            <div class="candle-flame"></div>
+                        </div>
+                        <div class="product-overlay">
+                            <span class="product-badge festive">Traditional</span>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h4>Kulhad Candles</h4>
+                        <p>Traditional Kulhad-shaped soy wax candles with a rustic desi charm — pairs beautifully with
+                            any Indian décor theme</p>
+                        <span class="product-tag">🕯️ Soy Wax Candles</span>
+                    </div>
+                </div>
+
+                <div class="product-card candle-card reveal-up" data-category="candle">
+                    <div class="product-image-wrapper candle-glow">
+                        <div class="candle-placeholder">
+                            <div class="candle-emoji">🌸</div>
+                            <div class="candle-flame"></div>
+                        </div>
+                        <div class="product-overlay">
+                            <span class="product-badge">Aromatic</span>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h4>Fragrance Jar Candles</h4>
+                        <p>Lavender, Rose, Vanilla and more — premium fragrance jar candles that fill your space with
+                            soothing, long-lasting aromas</p>
+                        <span class="product-tag">🕯️ Soy Wax Candles</span>
+                    </div>
+                </div>
+
+                <div class="product-card candle-card reveal-up" data-category="candle">
+                    <div class="product-image-wrapper candle-glow">
+                        <div class="candle-placeholder">
+                            <div class="candle-emoji">🪷</div>
+                            <div class="candle-flame"></div>
+                        </div>
+                        <div class="product-overlay">
+                            <span class="product-badge">Elegant</span>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h4>Floating Candles</h4>
+                        <p>Elegant floating soy wax candles for a serene ambiance — perfect for home décor, pooja, or a
+                            romantic evening</p>
+                        <span class="product-tag">🕯️ Soy Wax Candles</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PIPE CLEANER COLLECTION BANNER -->
+            <div class="collection-banner reveal-up" data-category="flower">
+                <div class="banner-icon">🌸</div>
+                <h3>Pipe Cleaner Craft Collection</h3>
+                <p>Stunning handmade flowers & crafts twisted into beauty — they last forever!</p>
+            </div>
+
+            <div class="products-grid">
+                <div class="product-card reveal-up" data-category="flower">
+                    <div class="product-image-wrapper">
+                        <img src="images/sunflower-single.jpg" alt="Pipe Cleaner Sunflower" loading="lazy">
+                        <div class="product-overlay">
+                            <span class="product-badge">Bestseller</span>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h4>Sunflower</h4>
+                        <p>A gorgeous oversized pipe cleaner sunflower — bright, bold, and guaranteed to bring sunshine
+                            into any room</p>
+                        <span class="product-tag">🌸 Pipe Cleaner</span>
+                    </div>
+                </div>
+
+                <div class="product-card reveal-up" data-category="flower">
+                    <div class="product-image-wrapper">
+                        <img src="images/sunflower-bunch.jpg" alt="Sunflower Bunch" loading="lazy">
+                        <div class="product-overlay">
+                            <span class="product-badge">Bundle</span>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h4>Sunflower Bouquet</h4>
+                        <p>A stunning bunch of handcrafted sunflowers that radiate warmth — a timeless gift that never
+                            wilts</p>
+                        <span class="product-tag">🌸 Pipe Cleaner</span>
+                    </div>
+                </div>
+
+                <div class="product-card reveal-up" data-category="flower">
+                    <div class="product-image-wrapper">
+                        <img src="images/lily-pink.jpg" alt="Pink Lily" loading="lazy">
+                        <div class="product-overlay">
+                            <span class="product-badge">Elegant</span>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h4>Pink Lily</h4>
+                        <p>Delicate pink lilies crafted with exquisite detail — a sophisticated touch for home décor or
+                            special occasions</p>
+                        <span class="product-tag">🌸 Pipe Cleaner</span>
+                    </div>
+                </div>
+
+                <div class="product-card reveal-up" data-category="flower">
+                    <div class="product-image-wrapper">
+                        <img src="images/lily-yellow.jpg" alt="Yellow Lily" loading="lazy">
+                        <div class="product-overlay">
+                            <span class="product-badge">Vibrant</span>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h4>Yellow Lily</h4>
+                        <p>Bright, cheerful yellow lilies with lush green leaves — handcrafted to perfection with pipe
+                            cleaners</p>
+                        <span class="product-tag">🌸 Pipe Cleaner</span>
+                    </div>
+                </div>
+
+                <div class="product-card reveal-up" data-category="flower">
+                    <div class="product-image-wrapper">
+                        <img src="images/lily-hotpink.jpg" alt="Hot Pink Lily" loading="lazy">
+                        <div class="product-overlay">
+                            <span class="product-badge">Bold</span>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h4>Hot Pink Lily</h4>
+                        <p>Bold and beautiful hot pink lilies — a statement piece that commands attention in any space
+                        </p>
+                        <span class="product-tag">🌸 Pipe Cleaner</span>
+                    </div>
+                </div>
+
+                <div class="product-card reveal-up" data-category="flower">
+                    <div class="product-image-wrapper">
+                        <img src="images/lily-purple.jpg" alt="Purple Lily" loading="lazy">
+                        <div class="product-overlay">
+                            <span class="product-badge">Royal</span>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h4>Purple Lily</h4>
+                        <p>Regal purple lilies with stunning detail — perfect for adding a royal touch to your desk or
+                            gift collection</p>
+                        <span class="product-tag">🌸 Pipe Cleaner</span>
+                    </div>
+                </div>
+
+                <div class="product-card reveal-up" data-category="flower">
+                    <div class="product-image-wrapper">
+                        <img src="images/lily-red.jpg" alt="Red Lily" loading="lazy">
+                        <div class="product-overlay">
+                            <span class="product-badge">Romantic</span>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h4>Red Lily</h4>
+                        <p>Passionate red lilies — a classic gift of love, handcrafted to last a lifetime unlike real
+                            flowers</p>
+                        <span class="product-tag">🌸 Pipe Cleaner</span>
+                    </div>
+                </div>
+
+                <div class="product-card reveal-up" data-category="flower">
+                    <div class="product-image-wrapper">
+                        <img src="images/lily-blue.jpg" alt="Blue Lily" loading="lazy">
+                        <div class="product-overlay">
+                            <span class="product-badge">Unique</span>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h4>Blue Lily</h4>
+                        <p>Rare and enchanting blue lilies — a unique creation you won't find anywhere else. Perfect as
+                            a standout gift</p>
+                        <span class="product-tag">🌸 Pipe Cleaner</span>
+                    </div>
+                </div>
+
+                <div class="product-card reveal-up" data-category="flower">
+                    <div class="product-image-wrapper">
+                        <img src="images/lavender-bouquet.jpg" alt="Lavender Bouquet" loading="lazy">
+                        <div class="product-overlay">
+                            <span class="product-badge">Calming</span>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h4>Lavender Bouquet</h4>
+                        <p>A lush bouquet of handcrafted lavender sprigs — brings the serenity and beauty of Provence
+                            into your home</p>
+                        <span class="product-tag">🌸 Pipe Cleaner</span>
+                    </div>
+                </div>
+
+                <div class="product-card reveal-up" data-category="flower">
+                    <div class="product-image-wrapper">
+                        <img src="images/desk-plant.jpg" alt="Desk Plant - Aloe" loading="lazy">
+                        <div class="product-overlay">
+                            <span class="product-badge">New</span>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h4>Desk Buddy – Plant</h4>
+                        <p>A cute miniature pipe cleaner plant in a tiny pot — the perfect desk companion that never
+                            needs watering!</p>
+                        <span class="product-tag">🌸 Pipe Cleaner</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Custom Order CTA -->
+            <div class="custom-cta reveal-up">
+                <div class="custom-cta-content">
+                    <h3>✨ Want Something Custom?</h3>
+                    <p>We love bringing your ideas to life! Custom name hangings, themed candles, personalized bouquets
+                        — just tell us your vision.</p>
+                    <a href="#contact" class="btn btn-primary">Request Custom Order</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section class="reviews" id="reviews">
+        <div class="container">
+            <div class="section-header reveal-up">
+                <span class="section-tag">Testimonials</span>
+                <h2 class="section-title">What Our <span class="highlight">Customers</span> Say</h2>
+                <p class="section-subtitle">Real love from real people — our biggest motivation</p>
+            </div>
+            <div class="reviews-grid">
+                <div class="review-card reveal-up">
+                    <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                    <p class="review-text">"I bought the motichoor laddoo soy wax candles from Anokha Karobaar and I
+                        absolutely loved them. They look so real, almost edible, and the detailing is beautiful. The
+                        fragrance (lavender & rose) is very soothing and they burn well for up to 5 hours. Such a unique
+                        and festive product. Perfect for décor and gifting. Loved the concept!"</p>
+                    <div class="review-author">
+                        <div class="review-avatar">💛</div>
+                        <div>
+                            <strong>Happy Customer</strong>
+                            <span>Candle Lover</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review-card reveal-up">
+                    <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                    <p class="review-text">"This key ring is pretty and very well-crafted. It adds a personal touch and
+                        warmth that needs to be admired. Thank you for such a lovely product! Keep growing, smiling and
+                        with a self belief in yourself."</p>
+                    <div class="review-author">
+                        <div class="review-avatar">💙</div>
+                        <div>
+                            <strong>Affan</strong>
+                            <span>Keychain Enthusiast</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review-card reveal-up">
+                    <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                    <p class="review-text">"The candles are so elegant and very well crafted. It's good to see the
+                        orders coming your way. Diwali just got a bit brighter I must say. Thank you for such a lovely
+                        product yet again. Keep growing, take care!"</p>
+                    <div class="review-author">
+                        <div class="review-avatar">🧡</div>
+                        <div>
+                            <strong>Affan</strong>
+                            <span>Repeat Customer</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review-card reveal-up">
+                    <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                    <p class="review-text">"I heard that your stall went really well yesterday, many, many
+                        congratulations! Moments like these are just small glimpses of your efforts with consistency.
+                        Have a little self belief, you can truly do wonders and I hope you reach good heights in
+                        future."</p>
+                    <div class="review-author">
+                        <div class="review-avatar">💜</div>
+                        <div>
+                            <strong>Affan</strong>
+                            <span>Supporter</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header reveal-up">
+                <span class="section-tag">Get in Touch</span>
+                <h2 class="section-title">Let's Create <span class="highlight">Together</span></h2>
+                <p class="section-subtitle">Have a question, a custom order idea, or just want to say hi? We'd love to
+                    hear from you!</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-card reveal-left">
+                    <div class="contact-icon">📱</div>
+                    <h3>WhatsApp / Call</h3>
+                    <p>Reach us directly for quick responses and order queries</p>
+                    <a href="https://wa.me/" class="contact-link">Message on WhatsApp →</a>
+                </div>
+                <div class="contact-card reveal-up">
+                    <div class="contact-icon">📧</div>
+                    <h3>Email Us</h3>
+                    <p>For bulk orders, corporate gifting or collaboration inquiries</p>
+                    <a href="mailto:anokhakarobaar@gmail.com" class="contact-link">anokhakarobaar@gmail.com</a>
+                </div>
+                <div class="contact-card reveal-right">
+                    <div class="contact-icon">📍</div>
+                    <h3>Follow Us</h3>
+                    <p>Stay updated with our latest creations and offers</p>
+                    <a href="https://www.instagram.com/anokhakarobaar" target="_blank"
+                        class="contact-link">@anokhakarobaar on Instagram →</a>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="contact-form-wrapper reveal-up">
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" id="name" placeholder="Your Name" required>
+                        <label for="name">Your Name</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" placeholder="Your Email" required>
+                        <label for="email">Your Email</label>
+                    </div>
+                    <div class="form-group full-width">
+                        <textarea id="message" placeholder="Your Message / Custom Order Details" rows="4"
+                            required></textarea>
+                        <label for="message">Your Message</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-submit">
+                        <span>Send Message</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M22 2L11 13"></path>
+                            <path d="M22 2L15 22L11 13L2 9L22 2Z"></path>
+                        </svg>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3 class="footer-logo">Anokha Karobaar</h3>
+                    <p>Handmade Wonders, Felt with Love 💛</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#products">Products</a>
+                    <a href="#reviews">Reviews</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Anokha Karobaar. All rights reserved. Made with 💛</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
