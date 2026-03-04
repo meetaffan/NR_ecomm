@@ -215,7 +215,7 @@ function initSmoothScroll() {
    WHATSAPP ORDER FLOW (Modal)
    =========================== */
 function initWhatsAppOrder() {
-    const phoneNumber = '916370577919';
+    const phoneNumber = '917562857277';
     const modal = document.getElementById('orderModal');
     const modalClose = document.getElementById('modalClose');
     const modalProductName = document.getElementById('modalProductName');
