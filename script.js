@@ -7,7 +7,8 @@ document.addEventListener('DOMContentLoaded', () => {
     initNavbar();
     initScrollReveal();
     initFilterTabs();
-    initContactForm();
+    initCarousels();
+    initWhatsAppOrder();
     initSmoothScroll();
 });
 
@@ -110,6 +111,7 @@ function initFilterTabs() {
     const filterBtns = document.querySelectorAll('.filter-btn');
     const productCards = document.querySelectorAll('.product-card');
     const banners = document.querySelectorAll('.collection-banner');
+    const subcategories = document.querySelectorAll('.candle-subcategory');
 
     filterBtns.forEach(btn => {
         btn.addEventListener('click', () => {
@@ -119,7 +121,7 @@ function initFilterTabs() {
 
             const filter = btn.dataset.filter;
 
-            // Filter cards
+            // Filter product cards
             productCards.forEach(card => {
                 const category = card.dataset.category;
                 if (filter === 'all' || category === filter) {
@@ -139,6 +141,17 @@ function initFilterTabs() {
                     banner.style.display = 'none';
                 }
             });
+
+            // Filter candle subcategories
+            subcategories.forEach(sub => {
+                const category = sub.dataset.category;
+                if (filter === 'all' || category === filter) {
+                    sub.style.display = '';
+                    sub.style.animation = 'fadeInUp 0.5s ease forwards';
+                } else {
+                    sub.style.display = 'none';
+                }
+            });
         });
     });
 
@@ -154,28 +167,29 @@ function initFilterTabs() {
 }
 
 /* ===========================
-   CONTACT FORM
+   CAROUSEL SCROLL
    =========================== */
-function initContactForm() {
-    const form = document.getElementById('contactForm');
-    if (!form) return;
+function initCarousels() {
+    document.querySelectorAll('.carousel-wrapper').forEach(wrapper => {
+        const track = wrapper.querySelector('.carousel-track');
+        const prevBtn = wrapper.querySelector('.carousel-prev');
+        const nextBtn = wrapper.querySelector('.carousel-next');
 
-    form.addEventListener('submit', (e) => {
-        e.preventDefault();
+        if (!track) return;
 
-        const btn = form.querySelector('.btn-submit');
-        const originalHTML = btn.innerHTML;
+        const scrollAmount = 280; // card width + gap
 
-        // Show success
-        btn.innerHTML = '<span>Message Sent! ✨</span>';
-        btn.style.background = 'linear-gradient(135deg, #4CAF50, #45a049)';
+        if (prevBtn) {
+            prevBtn.addEventListener('click', () => {
+                track.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+            });
+        }
 
-        // Reset after 3 seconds
-        setTimeout(() => {
-            btn.innerHTML = originalHTML;
-            btn.style.background = '';
-            form.reset();
-        }, 3000);
+        if (nextBtn) {
+            nextBtn.addEventListener('click', () => {
+                track.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+            });
+        }
     });
 }
 
@@ -194,5 +208,95 @@ function initSmoothScroll() {
                 });
             }
         });
+    });
+}
+
+/* ===========================
+   WHATSAPP ORDER FLOW (Modal)
+   =========================== */
+function initWhatsAppOrder() {
+    const phoneNumber = '916370577919';
+    const modal = document.getElementById('orderModal');
+    const modalClose = document.getElementById('modalClose');
+    const modalProductName = document.getElementById('modalProductName');
+    const orderForm = document.getElementById('orderForm');
+    let currentProduct = '';
+
+    // Add "Buy Now" buttons to product cards
+    document.querySelectorAll('.product-card .product-info').forEach(info => {
+        const productName = info.querySelector('h4')?.textContent || 'Product';
+        const btn = document.createElement('button');
+        btn.className = 'btn-whatsapp-order';
+        btn.innerHTML = '🛒 Buy Now';
+        btn.addEventListener('click', () => openModal(productName));
+        info.appendChild(btn);
+    });
+
+    // Add "Buy Now" buttons to carousel cards
+    document.querySelectorAll('.carousel-card').forEach(card => {
+        const label = card.querySelector('.carousel-label')?.textContent || 'Candle';
+        const subcatTitle = card.closest('.candle-subcategory')?.querySelector('.subcategory-title')?.textContent || '';
+        const fullName = subcatTitle ? `${subcatTitle.replace(/^[^\w]+/, '')} - ${label}` : label;
+        const btn = document.createElement('button');
+        btn.className = 'btn-whatsapp-order carousel-order-btn';
+        btn.innerHTML = '🛒 Buy Now';
+        btn.addEventListener('click', () => openModal(fullName));
+        card.appendChild(btn);
+    });
+
+    function openModal(productName) {
+        currentProduct = productName;
+        modalProductName.textContent = productName;
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+        // Focus first field
+        setTimeout(() => document.getElementById('orderName').focus(), 300);
+    }
+
+    function closeModal() {
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+        orderForm.reset();
+    }
+
+    // Close events
+    modalClose.addEventListener('click', closeModal);
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) closeModal();
+    });
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeModal();
+    });
+
+    // Form submit → WhatsApp
+    orderForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        const name = document.getElementById('orderName').value.trim();
+        const phone = document.getElementById('orderPhone').value.trim();
+        const address = document.getElementById('orderAddress').value.trim();
+        const qty = document.getElementById('orderQty').value;
+
+        const msg = [
+            `*NEW ORDER - Anokha Karobaar*`,
+            ``,
+            `----------------------------------`,
+            `*Product:* ${currentProduct}`,
+            `*Quantity:* ${qty}`,
+            `----------------------------------`,
+            ``,
+            `*Customer Details:*`,
+            `Name: ${name}`,
+            `Phone: ${phone}`,
+            `Address: ${address}`,
+            ``,
+            `----------------------------------`,
+            `Kindly confirm availability and share the payment details.`,
+            `Thank you!`
+        ].join('\n');
+        const message = encodeURIComponent(msg);
+
+        window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
+        closeModal();
     });
 }
